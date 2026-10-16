@@ -118,30 +118,21 @@
     <caption style="font-size:160%;">
         Current Standings
     </caption>
-    <tr>
-        <th>#</th>
-        <th>logo</th>
-        <th>Name</th>
-        <th>SP</th>
-        <th>G</th>
-        <th>U</th>
-        <th>V</th>
-        <th>+/-</th>
-        <th>TD</th>
-        <th>PKT</th>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>logo</th>
+            <th>Name</th>
+            <th>SP</th>
+            <th>G</th>
+            <th>U</th>
+            <th>V</th>
+            <th>+/-</th>
+            <th>TD</th>
+            <th>PKT</th>
+        </tr>
+    </thead>
+    <tbody>
     <tr>
         <td></td>
         <td></td>
@@ -154,7 +145,7 @@
         <td></td>
         <td></td>
     </tr>
-        <tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -346,6 +337,19 @@
         <td></td>
         <td></td>
     </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
 </table>
 
 <table id="duc" style="margin-left: 10em;float: left;margin-bottom: 0.5em;">
@@ -465,6 +469,13 @@
             <th>#</th>
             <th>logo</th>
             <th>Name</th>
+            <th>SP</th>
+            <th>G</th>
+            <th>U</th>
+            <th>V</th>
+            <th>+/-</th>
+            <th>TD</th>
+            <th>PKT</th>
         </tr>
     </thead>
     <tbody>
@@ -574,7 +585,7 @@
     .handle { cursor: grab; user-select: none;}
     tr.dragging { opacity: .4; }
     tr.over { outline: 2px solid #4a90e2; }
-    td input { width: 100%; box-sizing: border-box; border: 0; background: transparent; }
+    td input {width: 5ch;box-sizing: content-box; border: 0; background: transparent; }
   </style>
  
 

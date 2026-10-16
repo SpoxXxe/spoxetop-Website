@@ -30,6 +30,7 @@ function build_table(){
         cells[8].innerHTML = currTeam.goalDifference;
         cells[9].innerHTML = currTeam.points;
     }
+    document.querySelector("#grid tbody").replaceChildren(...[...document.querySelector("#currTable tbody").rows].map(row => row.cloneNode(true)));
 }
 
 function calculate_accuracy(){
@@ -68,7 +69,7 @@ function calculate_accuracy(){
 }
 
 
-const EDITABLE_COLUMNS = [];
+const EDITABLE_COLUMNS = [3,4,5,6,7,8,9];
 
 let dragged = null;
 
@@ -123,5 +124,14 @@ function swapRows(a, b) {
     a.before(marker);
     b.before(a);
     marker.replaceWith(b);
+
+    renumberRows();
     calculate_accuracy();
+}
+
+function renumberRows() {
+  document.querySelectorAll('#grid tbody tr').forEach((tr, i) => {
+    // +1 because setupRow adds the drag handle cell at the start
+    tr.cells[0 + 1].textContent = i + 1;
+  });
 }
